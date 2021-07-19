@@ -42,7 +42,7 @@ namespace IdentityServer
                 new Client
                 {
                     ClientId = "pkce_client",
-                    ClientName = "React PKCE Client",
+                    ClientName = "Your favourite pizza",
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
                     RedirectUris = { "http://localhost:9000" },
