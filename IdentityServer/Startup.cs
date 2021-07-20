@@ -14,6 +14,14 @@ namespace IdentityServer
             
             services.ConfigureNonBreakingSameSiteCookies();
 
+            services.AddSingleton<ICorsPolicyService>(container => {
+                var logger = container.GetRequiredService<ILogger<DefaultCorsPolicyService>>();
+                return new DefaultCorsPolicyService(logger)
+                {
+                    AllowAll = true
+                };
+            });
+            
             services.AddIdentityServer()
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApis())

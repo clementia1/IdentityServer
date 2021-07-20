@@ -45,7 +45,7 @@ namespace IdentityServer
                     ClientName = "Your favourite pizza",
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
-                    RedirectUris = { "http://localhost:9000" },
+                    RedirectUris = { "http://168.62.49.228" },
                     AllowedScopes = { "openid", "profile", "website.com" },
                     RequirePkce = true,
                     RequireConsent = false,
@@ -61,7 +61,7 @@ namespace IdentityServer
                     // secret for authentication
                     ClientSecrets =
                     {
-                        new Secret("secret".Sha256())
+                        new Secret("not-a-secret".Sha256())
                     },
 
                     // scopes that client has access to
