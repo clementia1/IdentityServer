@@ -42,11 +42,11 @@ namespace IdentityServer
                 new Client
                 {
                     ClientId = "pkce_client",
-                    ClientName = "Your favourite pizza",
+                    ClientName = "Pizza Shop",
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false,
-                    RedirectUris = { "http://localhost:9000" },
-                    PostLogoutRedirectUris = { "http://localhost:9000" },
+                    RedirectUris = { "http://168.62.49.228/" },
+                    PostLogoutRedirectUris = { "http://168.62.49.228/" },
                     AllowedScopes = { "openid", "profile", "website.com" },
                     RequirePkce = true,
                     RequireConsent = false,
